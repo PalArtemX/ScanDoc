@@ -11,6 +11,10 @@
 		1ACE70D026D4225500B2ED0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70CF26D4225500B2ED0F /* ContentView.swift */; };
 		1ACE70D226D4225600B2ED0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE70D126D4225600B2ED0F /* Assets.xcassets */; };
 		1ACE70D526D4225600B2ED0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE70D426D4225600B2ED0F /* Preview Assets.xcassets */; };
+		1ACE70E126D4293A00B2ED0F /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E026D4293A00B2ED0F /* Scan.swift */; };
+		1ACE70E326D42BAB00B2ED0F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */; };
+		1ACE70E526D42EED00B2ED0F /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */; };
+		1ACE70E726D4F9AC00B2ED0F /* ScanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		1ACE70D126D4225600B2ED0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ACE70D426D4225600B2ED0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ACE70D626D4225600B2ED0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACE70E026D4293A00B2ED0F /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				1ACE70CD26D4225500B2ED0F /* ScannerDocApp.swift */,
-				1ACE70CF26D4225500B2ED0F /* ContentView.swift */,
+				1ACE70DF26D4228500B2ED0F /* Views */,
+				1ACE70DE26D4227B00B2ED0F /* ViewModel */,
+				1ACE70DD26D4227800B2ED0F /* Model */,
+				1ACE70DC26D4227100B2ED0F /* Extension */,
 				1ACE70D126D4225600B2ED0F /* Assets.xcassets */,
 				1ACE70D626D4225600B2ED0F /* Info.plist */,
 				1ACE70D326D4225600B2ED0F /* Preview Content */,
@@ -67,6 +78,39 @@
 				1ACE70D426D4225600B2ED0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1ACE70DC26D4227100B2ED0F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1ACE70DD26D4227800B2ED0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1ACE70E026D4293A00B2ED0F /* Scan.swift */,
+				1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1ACE70DE26D4227B00B2ED0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1ACE70DF26D4228500B2ED0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ACE70CF26D4225500B2ED0F /* ContentView.swift */,
+				1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ACE70D026D4225500B2ED0F /* ContentView.swift in Sources */,
+				1ACE70E326D42BAB00B2ED0F /* ScannerView.swift in Sources */,
+				1ACE70E526D42EED00B2ED0F /* TextRecognizer.swift in Sources */,
 				1ACE70CE26D4225500B2ED0F /* ScannerDocApp.swift in Sources */,
+				1ACE70E126D4293A00B2ED0F /* Scan.swift in Sources */,
+				1ACE70E726D4F9AC00B2ED0F /* ScanVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
