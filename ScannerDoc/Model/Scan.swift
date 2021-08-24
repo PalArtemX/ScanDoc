@@ -12,5 +12,4 @@ struct Scan: Identifiable {
     var id = UUID()
     
     let content: String
-    
 }

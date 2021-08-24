@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1ACE70CE26D4225500B2ED0F /* ScannerDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70CD26D4225500B2ED0F /* ScannerDocApp.swift */; };
-		1ACE70D026D4225500B2ED0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70CF26D4225500B2ED0F /* ContentView.swift */; };
+		1ACE70D026D4225500B2ED0F /* ScannerDocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70CF26D4225500B2ED0F /* ScannerDocView.swift */; };
 		1ACE70D226D4225600B2ED0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE70D126D4225600B2ED0F /* Assets.xcassets */; };
 		1ACE70D526D4225600B2ED0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACE70D426D4225600B2ED0F /* Preview Assets.xcassets */; };
 		1ACE70E126D4293A00B2ED0F /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E026D4293A00B2ED0F /* Scan.swift */; };
 		1ACE70E326D42BAB00B2ED0F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */; };
 		1ACE70E526D42EED00B2ED0F /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */; };
 		1ACE70E726D4F9AC00B2ED0F /* ScanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */; };
+		1ACE70EA26D506D500B2ED0F /* TextContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70E926D506D500B2ED0F /* TextContentView.swift */; };
+		1ACE70EC26D50C3500B2ED0F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACE70EB26D50C3500B2ED0F /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1ACE70CA26D4225500B2ED0F /* ScannerDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScannerDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACE70CD26D4225500B2ED0F /* ScannerDocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDocApp.swift; sourceTree = "<group>"; };
-		1ACE70CF26D4225500B2ED0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1ACE70CF26D4225500B2ED0F /* ScannerDocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDocView.swift; sourceTree = "<group>"; };
 		1ACE70D126D4225600B2ED0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ACE70D426D4225600B2ED0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ACE70D626D4225600B2ED0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVM.swift; sourceTree = "<group>"; };
+		1ACE70E926D506D500B2ED0F /* TextContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentView.swift; sourceTree = "<group>"; };
+		1ACE70EB26D50C3500B2ED0F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		1ACE70DC26D4227100B2ED0F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1ACE70EB26D50C3500B2ED0F /* Color.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -91,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				1ACE70E026D4293A00B2ED0F /* Scan.swift */,
-				1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1ACE70E626D4F9AC00B2ED0F /* ScanVM.swift */,
+				1ACE70E426D42EED00B2ED0F /* TextRecognizer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,8 +112,9 @@
 		1ACE70DF26D4228500B2ED0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1ACE70CF26D4225500B2ED0F /* ContentView.swift */,
+				1ACE70CF26D4225500B2ED0F /* ScannerDocView.swift */,
 				1ACE70E226D42BAB00B2ED0F /* ScannerView.swift */,
+				1ACE70E926D506D500B2ED0F /* TextContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,10 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ACE70D026D4225500B2ED0F /* ContentView.swift in Sources */,
+				1ACE70D026D4225500B2ED0F /* ScannerDocView.swift in Sources */,
 				1ACE70E326D42BAB00B2ED0F /* ScannerView.swift in Sources */,
 				1ACE70E526D42EED00B2ED0F /* TextRecognizer.swift in Sources */,
 				1ACE70CE26D4225500B2ED0F /* ScannerDocApp.swift in Sources */,
+				1ACE70EA26D506D500B2ED0F /* TextContentView.swift in Sources */,
+				1ACE70EC26D50C3500B2ED0F /* Color.swift in Sources */,
 				1ACE70E126D4293A00B2ED0F /* Scan.swift in Sources */,
 				1ACE70E726D4F9AC00B2ED0F /* ScanVM.swift in Sources */,
 			);

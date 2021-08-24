@@ -19,6 +19,8 @@ class TextRecognizer {
     
     private let queue = DispatchQueue(label: "scan-codes", qos: .default, attributes: [], autoreleaseFrequency: .workItem)
     
+    
+    // MARK: - func
     func recognizeText(withCompletionHandler: @escaping ([String]) -> Void) {
         queue.async {
             let images = (0..<self.cameraScan.pageCount).compactMap({

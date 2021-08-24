@@ -10,12 +10,16 @@ import VisionKit
 
 
 struct ScannerView: UIViewControllerRepresentable {
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(completion: comletionHandler)
+
+    typealias UIViewControllerType = VNDocumentCameraViewController
+    
+    private let comletionHandler: ([String]?) -> Void
+    
+    init(comletion: @escaping ([String]?) -> Void) {
+        comletionHandler = comletion
     }
     
-    
-    
+    // MARK: - Coordinator
     final class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         private let completionHandler: ([String]?) -> Void
         
@@ -37,6 +41,11 @@ struct ScannerView: UIViewControllerRepresentable {
     }
     
     
+    // MARK: - func
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(completion: comletionHandler)
+    }
     
     func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
         let viewController = VNDocumentCameraViewController()
@@ -44,22 +53,10 @@ struct ScannerView: UIViewControllerRepresentable {
         return viewController
     }
     
-    
-    
     func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
         
     }
     
-    
-    
-    typealias UIViewControllerType = VNDocumentCameraViewController
-    
-    
-    
-    private let comletionHandler: ([String]?) -> Void
-    
-    init(comletion: @escaping ([String]?) -> Void) {
-        comletionHandler = comletion
-    }
+
 }
 
