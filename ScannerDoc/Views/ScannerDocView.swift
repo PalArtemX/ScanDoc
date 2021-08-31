@@ -10,10 +10,11 @@ import SwiftUI
 struct ScannerDocView: View {
     
     @StateObject var vm = ScanVM()
-    let columns: [GridItem] = [GridItem(.adaptive(minimum: 140, maximum: 300))]
+    let columns = [GridItem(.adaptive(minimum: 140, maximum: 300))]
     
     var body: some View {
         NavigationView {
+            
             VStack {
                 if vm.scan.count > 0 {
                     
@@ -38,9 +39,8 @@ struct ScannerDocView: View {
                 
                 
             } // VStack
-            .sheet(isPresented: $vm.showScannerSheet) {
-                vm.makeScannerView()
-            }
+            
+            .sheet(isPresented: $vm.showScannerSheet) { vm.makeScannerView() }
             .navigationBarItems(trailing:
                                     Button(action: {
                                         vm.showScannerSheet.toggle()
@@ -55,7 +55,6 @@ struct ScannerDocView: View {
                                         
                                     }))
             
-            //.navigationTitle("Scanner Doc")
         } // NavigationView
     }
 }
@@ -75,6 +74,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+// MARK: - Subview
 struct NoScanView: View {
     
     @Binding var show: Bool
@@ -98,8 +98,6 @@ struct NoScanView: View {
                 .font(.headline)
             })
             .padding()
-            
         }
-        
     }
 }

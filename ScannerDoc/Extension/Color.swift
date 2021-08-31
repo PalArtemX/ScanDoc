@@ -15,6 +15,7 @@ struct ColorTheme {
     let text = Color("Text")
 }
 
+
 extension Color {
     static let colorTheme = ColorTheme()
 }
